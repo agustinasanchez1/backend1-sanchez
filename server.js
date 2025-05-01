@@ -36,8 +36,8 @@ io.on('connection', (socket) => {
     console.log('Cliente conectado');
 });
 
-app.use('/api/products', productsRouter(productManager, io)); 
-app.use('/api/carts', cartsRouter(cartManager)); 
+app.use('/api/products', productsRouter(productManager, io));
+app.use('/api/carts', cartsRouter(cartManager));
 
 app.use((req, res) => {
     res.status(404).send('Ruta no encontrada');
